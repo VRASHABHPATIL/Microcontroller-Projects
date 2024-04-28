@@ -4,4 +4,4 @@ Design and implement a `8 bit` counter system using the `Atmega32` microcontroll
 ## VIRTUAL IMPLEMENTATION
 `Note : Here this virual implementation is done under Proteous  and that file is provided here in this project as  Backup Of timerproject.pdsbak `
 
-<img src="https://github.com/VRASHABHPATIL/Microcontroller-Projects/assets/105427388/3f6ac6c2-6447-4254-aafc-794fa9e2b745" width=200 height=200/>
+<img src="https://github.com/VRASHABHPATIL/Microcontroller-Projects/assets/105427388/3f6ac6c2-6447-4254-aafc-794fa9e2b745" width=500 height=300/>
