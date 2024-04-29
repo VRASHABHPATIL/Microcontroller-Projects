@@ -14,33 +14,33 @@ Design and implement a `8 bit` counter system using the `Atmega32` microcontroll
 
 ## FLOW OF THE CODE
 
-1.LDI R19, 0 This instruction loads the value 0 into register R19.
+1. LDI R19, 0 This instruction loads the value 0 into register R19.
 
-2.CBI DDRB, 0 This instruction clears bit 0 of the DDRB (Data Direction Register B) register.
+2. CBI DDRB, 0 This instruction clears bit 0 of the DDRB (Data Direction Register B) register.
 
-3.LDI R20, 0xFF This instruction loads the value 0xFF (all bits set) into register R20.OUT DDRC, R20 This instruction writes the value of R20 (0xFF) to the DDRC (Data Direction Register C) register, configuring all pins of Port C as outputs.
+3. LDI R20, 0xFF This instruction loads the value 0xFF (all bits set) into register R20.OUT DDRC, R20 This instruction writes the value of R20 (0xFF) to the DDRC (Data Direction Register C) register, configuring all pins of Port C as outputs.
 
-4.LDI R20, 0x06 This instruction loads the value 0x06 into register R20.
+4. LDI R20, 0x06 This instruction loads the value 0x06 into register R20.
 
-5.OUT TCCR0, R20 This instruction writes the value of R20 (0x06) to the TCCR0 (Timer/Counter Control Register 0), presumably configuring Timer/Counter 0 with the 
+5. OUT TCCR0, R20 This instruction writes the value of R20 (0x06) to the TCCR0 (Timer/Counter Control Register 0), presumably configuring Timer/Counter 0 with the 
 specified settings.
 
-6.AGAIN: This is a label indicating the start of a loop.
+6. AGAIN: This is a label indicating the start of a loop.
 
-7.IN R20, TCNT0 This instruction reads the value of the TCNT0 (Timer/Counter 0) register and stores it in R20.
+7. IN R20, TCNT0 This instruction reads the value of the TCNT0 (Timer/Counter 0) register and stores it in R20.
 
-8.OUT PORTC, R20 This instruction writes the value of R20 to the PORTC register, which controls the output values on Port C.
+8. OUT PORTC, R20 This instruction writes the value of R20 to the PORTC register, which controls the output values on Port C.
 
-9.IN R16, TIFR This instruction reads the value of the TIFR (Timer/Counter Interrupt Flag Register) and stores it in R16.
+9. IN R16, TIFR This instruction reads the value of the TIFR (Timer/Counter Interrupt Flag Register) and stores it in R16.
 
-10.SBRS R16, TOV0 This instruction skips the next instruction if bit TOV0 (Timer/Counter Overflow Flag 0) in R16 is set.
+10. SBRS R16, TOV0 This instruction skips the next instruction if bit TOV0 (Timer/Counter Overflow Flag 0) in R16 is set.
 
-11.RJMP AGAIN This instruction performs a relative jump back to the "AGAIN" label, creating a loop.
+11. RJMP AGAIN This instruction performs a relative jump back to the "AGAIN" label, creating a loop.
 
-12.LDI R16, 1 << TOV0 This instruction loads the value 1 left-shifted by the position of TOV0 (Timer/Counter Overflow Flag 0) into R16.
+12. LDI R16, 1 << TOV0 This instruction loads the value 1 left-shifted by the position of TOV0 (Timer/Counter Overflow Flag 0) into R16.
 
-13.OUT TIFR, R16 This instruction writes the value of R16 to the TIFR register, presumably to clear the Timer/Counter Overflow Flag.
+13. OUT TIFR, R16 This instruction writes the value of R16 to the TIFR register, presumably to clear the Timer/Counter Overflow Flag.
 
-14.RJMP AGAIN This instruction performs a relative jump back to the "AGAIN" label, creating an infinite loop.The code sets up Timer/Counter 0 and continuously reads its value, writing it to PORTC. It then checks the Timer/Counter Overflow Flag (TOV0) and clears it before repeating the process indefinitely
+14. RJMP AGAIN This instruction performs a relative jump back to the "AGAIN" label, creating an infinite loop.The code sets up Timer/Counter 0 and continuously reads its value, writing it to PORTC. It then checks the Timer/Counter Overflow Flag (TOV0) and clears it before repeating the process indefinitely
 
 `note : Code's are provided above `
