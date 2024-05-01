@@ -1,5 +1,5 @@
 ## Digital Clock
 
-### Problem Statement
+### PROBLEM STATEMENT
 
 
