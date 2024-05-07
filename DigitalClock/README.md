@@ -6,7 +6,7 @@ Design a `digital clock` using a microcontroller that displays the current time 
 
 ### VIRTUAL IMPLEMENTATION
 
-<img src="https://github.com/VRASHABHPATIL/Microcontroller-Projects/assets/105427388/87d7fae4-f3de-41d9-b315-cf37be371dd3" height="500" width="800"/>
+<img src="https://github.com/VRASHABHPATIL/Microcontroller-Projects/assets/105427388/87d7fae4-f3de-41d9-b315-cf37be371dd3" height="500" width="900"/>
 
 `note :The above proteous code is mentioned above as Backup Of digitalclock.pdsbak`
 
